@@ -51,7 +51,7 @@ public class dcoApi2 {
                 if (response.isSuccessful()) {
                     return response.body().string();
                 } else {
-                    return "Request failed with code: " + response.code();
+                    return "Request failed with codee: " + response.code();
                 }
             } catch (IOException e) {
                 e.printStackTrace();
