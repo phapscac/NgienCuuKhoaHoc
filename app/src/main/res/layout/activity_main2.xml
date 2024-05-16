@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/butVi"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Main_2"
+    tools:visibility="invisible">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- ImageView -->
+        <ImageView
+            android:id="@+id/imageViewAnh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/hinhnen"
+            />
+        <TextView
+            android:id="@+id/txtTB"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text=""
+            android:textColor="#163BC0"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+        <!-- LinearLayout chứa các nút button -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <!-- LinearLayout con chứa nút button -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <Button
+                    android:id="@+id/butTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+
+                    android:textStyle="bold"
+                    android:background="@drawable/button_border"
+                    android:padding="10dp"
+                    android:textSize="20sp"
+                    android:textColor="#050A19"
+                    android:text="Chọn ảnh/Choose photo" />
+                <!-- Button 3 -->
+                <Button
+                    android:id="@+id/butDoc"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_border"
+                    android:padding="10dp"
+                    android:textColor="#010615"
+                    android:text="Đọc/Read"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!-- LinearLayout con chứa nút button -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <!-- Button chụp ảnh -->
+                <Button
+                    android:id="@+id/butAnh"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_border"
+                    android:padding="10dp"
+                    android:textColor="#050810"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:text="Chụp ảnh/Take a photo" />
+                <!-- Button 4 -->
+                <Button
+                    android:id="@+id/butDocEng"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_border"
+                    android:padding="10dp"
+                    android:textColor="#020715"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:text="Chú thích/Caption" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/loadingPanel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#C9EDEDED"
+        android:gravity="center"
+        android:visibility="invisible"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:indeterminateTint="#00116E" />
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
+
